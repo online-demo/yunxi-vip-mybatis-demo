@@ -75,8 +75,15 @@
                     <!-- 覆盖生成文件 -->
                     <overwrite>true</overwrite>
                     <!-- 定义配置文件 -->
-                    <configurationFile>${basedir}/src/main/resources/generator-configuration.xml</configurationFile>
+                    <configurationFile>${basedir}/src/main/resources/generatorConfig.xml</configurationFile>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.21</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
