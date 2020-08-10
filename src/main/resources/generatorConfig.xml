@@ -7,6 +7,11 @@
     <!-- id：起个名字 -->
     <!-- targetRuntime：设置生成的文件适用于那个 mybatis 版本 -->
     <context id="default" targetRuntime="MyBatis3">
+        <!-- JavaBean 实现 序列化 接口 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- generate entity时,生成toString -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
         <!--optional,指在创建class时，对注释进行控制-->
         <commentGenerator>
             <property name="suppressDate" value="true"/>
@@ -58,4 +63,5 @@
                selectByExampleQueryId="false"/>
 
     </context>
+
 </generatorConfiguration>
