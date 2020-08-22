@@ -33,7 +33,7 @@
       #{age,jdbcType=INTEGER}, #{gender,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.yunxi.mybatis.demo.model.Teacher">
+  <insert id="insertSelective" parameterType="com.example.yunxi.mybatis.demo.model.Teacher" useGeneratedKeys="true" keyProperty="id">
     insert into teacher
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -115,5 +115,11 @@
       createTime = #{createtime,jdbcType=TIMESTAMP},
       updateTime = #{updatetime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateNameByPrimaryKey">
+    update teacher
+      set name = #{name,jdbcType=VARCHAR},
+      nickName = #{name,jdbcType=VARCHAR}
+      where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
