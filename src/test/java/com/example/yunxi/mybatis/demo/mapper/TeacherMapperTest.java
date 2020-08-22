@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = YunxiMybatisDemoApplication.class)
 @Slf4j
-public class StudentMapperTest {
+public class TeacherMapperTest {
     @Autowired
     private SqlSessionFactory factory;
 
