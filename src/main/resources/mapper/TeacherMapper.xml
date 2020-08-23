@@ -12,6 +12,8 @@
       <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
+  <!--Mybatis第四节二级缓存添加此配置-->
+  <cache/>
   <sql id="Base_Column_List">
     id, name, nickName, age, gender, createTime, updateTime
   </sql>

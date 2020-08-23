@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @Author: 无双老师【云析学院:http://yunxiedu.net QQ:3190976240 email:zhouguanya20@163.com】
  * @Date: 2020-08-18 18:57
- * @Description: 学生测试类
+ * @Description: 老师测试类
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = YunxiMybatisDemoApplication.class)
@@ -29,7 +29,7 @@ public class TeacherMapperTest {
     @Test
     public void showDefaultCacheConfiguration() {
         System.out.println("本地缓存范围: " + factory.getConfiguration().getLocalCacheScope());
-        System.out.println("二级缓存是否被启用: " + factory.getConfiguration().isCacheEnabled());
+        System.out.println("一级缓存是否被启用: " + factory.getConfiguration().isCacheEnabled());
     }
 
     /**
