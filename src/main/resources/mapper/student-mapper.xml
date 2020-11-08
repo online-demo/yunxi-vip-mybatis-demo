@@ -21,4 +21,12 @@
         from student
         where id = #{id,jdbcType=INTEGER}
     </select>
+    <select id="findByPaging" resultMap="BaseResultMap">
+        SELECT
+            `id`, `name`, `age`
+        FROM
+            student
+        WHERE
+            id > #{id}
+    </select>
 </mapper>

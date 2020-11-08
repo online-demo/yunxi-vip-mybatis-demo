@@ -2,6 +2,10 @@ package com.example.yunxi.mybatis.demo.dao;
 
 import com.example.yunxi.mybatis.demo.model.Student;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
+
+import java.util.List;
 
 /**
  * @Author: 无双老师【云析学院:http://yunxiedu.net QQ:3190976240 email:zhouguanya20@163.com】
@@ -25,4 +29,12 @@ public interface StudentDao {
      * @return 学生信息
      */
     Student query(int id);
+
+    /**
+     * 分页查询
+     *
+     * @param id
+     * @param rowBounds
+     */
+    List<Student> findByPaging(@Param("id") Integer id, RowBounds rowBounds);
 }
